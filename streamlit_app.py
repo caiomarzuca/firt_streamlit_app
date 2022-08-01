@@ -10,9 +10,10 @@ streamlit.text('🐔Hard-Boiled Free-Range Egg')
 streamlit.text('🥑🍞 Avocato Toast')
 streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
 
-# List of fruits to choose
-streamlit.multiselect("Pick up some fruit:", list(my_fruit_list.index))
-
 #Read and display dataframe 
 my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
+
+# List of fruits to choose
+streamlit.multiselect("Pick some fruit:", list(my_fruit_list.index))
+
 streamlit.dataframe(my_fruit_list)
