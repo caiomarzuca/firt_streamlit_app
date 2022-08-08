@@ -33,7 +33,7 @@ streamlit.write('The user entered ', fruit_choice)
 
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 
-# Modeling json data like table view
+# Modeling json data like table view view
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # Put de table on the screem
 streamlit.dataframe(fruityvice_normalized)
